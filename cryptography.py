@@ -9,7 +9,7 @@ from Crypto.Util.Padding import pad
 key = SHA256.new("FJUC34".encode()).digest()
 
 # Caminho para o arquivo com os dados a serem criptografados
-input_file_path = r"C:/Users/MMessa/Documents/Marketing/site/pythonDescript/descriptografado.txt"
+input_file_path = "C:/Users/MMessa/Documents/Marketing/descriptografador/decrypt.txt"
 
 # Ler os dados que serão criptografados
 with open(input_file_path, "r", encoding="utf-8") as file:
@@ -41,7 +41,7 @@ cipher_text_base64 = base64.b64encode(cipher_text).decode('utf-8')
 encrypted_data = f"{iv_base64}:{cipher_text_base64}"
 
 # Salvar o texto cifrado no arquivo desejado
-output_file_path = r"C:/Users/MMessa/Documents/Marketing/site/pythonDescript/encrypt.txt"
+output_file_path = "C:/Users/MMessa/Documents/Marketing/descriptografador/cryptAgain.txt"
 with open(output_file_path, "w", encoding="utf-8") as file:
     file.write(encrypted_data)
 

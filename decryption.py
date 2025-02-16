@@ -7,7 +7,7 @@ from Crypto.Hash import SHA256
 key = SHA256.new("FJUC34".encode()).digest()
 
 # Caminho para o arquivo encriptado
-file_path = r"C:/Users/MMessa/Documents/Marketing/site/pythonDescript/decrypt.txt"
+file_path = "C:/Users/MMessa/Documents/Marketing/descriptografador/crypt.txt"
 
 with open(file_path, "r") as file:
     encrypted_funnel = file.read().strip()
@@ -30,7 +30,7 @@ try:
     decrypted_json = json.loads(decrypted_data)
 
     # **Escrevendo os dados descriptografados em um novo arquivo**
-    output_file_path = r"C:/Users/MMessa/Documents/Marketing/site/pythonDescript/descriptografado.txt"
+    output_file_path = "C:/Users/MMessa/Documents/Marketing/descriptografador/decrypt.txt"
     with open(output_file_path, "w", encoding="utf-8") as output_file:
         # Se quiser salvar como texto simples:
         output_file.write(decrypted_data)
